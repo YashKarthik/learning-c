@@ -1,7 +1,10 @@
 #include <stdio.h>
 
 int main() {
-  long count = 0;
-  while (getchar() != EOF) ++count;
-  printf("\nCount: %ld\n", count);
+  int newlines = 0;
+  int c;
+  while ((c = getchar()) != EOF)
+    if (c == '\n')
+      ++newlines;
+  printf("\nCount: %d\n", newlines);
 }
